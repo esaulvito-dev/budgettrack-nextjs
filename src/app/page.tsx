@@ -2,6 +2,7 @@ import Navbar from '@/components/Navbar';
 import Testimonios from '@/components/Testimonios';
 import FAQ from '@/components/FAQ';
 import Countdown from '@/components/Countdown';
+import VideoPlayer from '@/components/VideoPlayer';
 
 const benefits = [
   { icon: 'ri-money-dollar-circle-line', title: 'Descubre los "gastos hormiga" que te roban dinero', desc: 'Identifica en segundos dónde se escapa tu dinero. Un café aquí, un taxi allá... Te mostramos la verdad completa de tus gastos diarios.' },
@@ -97,9 +98,7 @@ export default function Home() {
                         </div>
                       </div>
                     </div>
-                    <div className="relative rounded-lg sm:rounded-2xl overflow-hidden bg-muted aspect-video w-full">
-                      <iframe src="https://player.vimeo.com/video/1159768753?badge=0&autopause=0&player_id=0&app_id=58479&autoplay=1&loop=1&muted=1" className="absolute inset-0 w-full h-full" frameBorder={0} allow="autoplay; fullscreen; picture-in-picture; clipboard-write; encrypted-media" title="BudgetTrack - Video Demo" allowFullScreen></iframe>
-                    </div>
+                    <VideoPlayer />
                   </div>
                 </div>
               </div>
