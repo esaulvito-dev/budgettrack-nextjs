@@ -1,0 +1,68 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+:root {
+  --primary: 20 184 166;
+  --primary-foreground: 255 255 255;
+  --background: 255 255 255;
+  --foreground: 15 23 42;
+  --muted-foreground: 100 116 139;
+  --card: 255 255 255;
+  --border: 226 232 240;
+  --muted: 241 245 249;
+  --accent: 241 245 249;
+  --accent-foreground: 15 23 42;
+  --ring: 20 184 166;
+}
+
+* { font-family: 'Inter', sans-serif; }
+
+body {
+  background-color: #ffffff;
+  color: rgb(var(--foreground));
+}
+
+.text-primary { color: rgb(var(--primary)); }
+.bg-primary { background-color: rgb(var(--primary)); }
+.border-primary { border-color: rgb(var(--primary)); }
+.text-foreground { color: rgb(var(--foreground)); }
+.text-muted-foreground { color: rgb(var(--muted-foreground)); }
+.bg-card { background-color: rgb(var(--card)); }
+.bg-muted { background-color: rgb(var(--muted)); }
+.border-border { border-color: rgb(var(--border)); }
+.text-primary-foreground { color: rgb(var(--primary-foreground)); }
+.bg-background { background-color: rgb(var(--background)); }
+.bg-accent { background-color: rgb(var(--accent)); }
+.text-accent-foreground { color: rgb(var(--accent-foreground)); }
+.ring-ring { --tw-ring-color: rgb(var(--ring)); }
+.ring-offset-background { --tw-ring-offset-color: rgb(var(--background)); }
+
+.gradient-hero {
+  background: linear-gradient(135deg, rgb(20, 184, 166), rgb(16, 185, 129));
+}
+
+.text-gradient {
+  background: linear-gradient(135deg, rgb(20, 184, 166), rgb(16, 185, 129));
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  background-clip: text;
+}
+
+.shadow-card { box-shadow: 0 4px 6px -1px rgba(0,0,0,0.07), 0 2px 4px -1px rgba(0,0,0,0.04); }
+.shadow-glow { box-shadow: 0 0 30px rgba(20,184,166,0.3); }
+
+.white-texture { background-color: #fff; }
+.white-texture-dots { background-color: #fff; }
+.white-texture-alt { background-color: #fafafa; }
+
+@keyframes slideDown {
+  from { opacity: 0; transform: translateY(-20px); }
+  to { opacity: 1; transform: translateY(0); }
+}
+@keyframes fadeInUp {
+  from { opacity: 0; transform: translateY(20px); }
+  to { opacity: 1; transform: translateY(0); }
+}
+
+html { scroll-behavior: smooth; }
