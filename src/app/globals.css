@@ -16,12 +16,9 @@
   --ring: 20 184 166;
 }
 
-* { font-family: 'Inter', sans-serif; }
-
-body {
-  background-color: #ffffff;
-  color: rgb(var(--foreground));
-}
+html { scroll-behavior: smooth; }
+* { font-family: var(--font-inter), Inter, system-ui, sans-serif; }
+body { background-color: #ffffff; color: rgb(var(--foreground)); }
 
 .text-primary { color: rgb(var(--primary)); }
 .bg-primary { background-color: rgb(var(--primary)); }
@@ -38,31 +35,20 @@ body {
 .ring-ring { --tw-ring-color: rgb(var(--ring)); }
 .ring-offset-background { --tw-ring-offset-color: rgb(var(--background)); }
 
-.gradient-hero {
-  background: linear-gradient(135deg, rgb(20, 184, 166), rgb(16, 185, 129));
-}
-
+.gradient-hero { background: linear-gradient(135deg, rgb(20, 184, 166), rgb(16, 185, 129)); }
 .text-gradient {
   background: linear-gradient(135deg, rgb(20, 184, 166), rgb(16, 185, 129));
   -webkit-background-clip: text;
   -webkit-text-fill-color: transparent;
   background-clip: text;
 }
+.shadow-card { box-shadow: 0 1px 3px 0 rgba(0,0,0,0.1), 0 1px 2px -1px rgba(0,0,0,0.1); }
+.shadow-glow { box-shadow: 0 0 30px rgba(20, 184, 166, 0.3); }
+.white-texture { background-color: #ffffff; }
+.white-texture-dots { background-color: #f8fafc; }
+.white-texture-alt { background-color: #ffffff; }
 
-.shadow-card { box-shadow: 0 4px 6px -1px rgba(0,0,0,0.07), 0 2px 4px -1px rgba(0,0,0,0.04); }
-.shadow-glow { box-shadow: 0 0 30px rgba(20,184,166,0.3); }
-
-.white-texture { background-color: #fff; }
-.white-texture-dots { background-color: #fff; }
-.white-texture-alt { background-color: #fafafa; }
-
-@keyframes slideDown {
-  from { opacity: 0; transform: translateY(-20px); }
-  to { opacity: 1; transform: translateY(0); }
-}
-@keyframes fadeInUp {
-  from { opacity: 0; transform: translateY(20px); }
-  to { opacity: 1; transform: translateY(0); }
-}
-
-html { scroll-behavior: smooth; }
+@keyframes slideDown { from { opacity: 0; transform: translateY(-20px); } to { opacity: 1; transform: translateY(0); } }
+@keyframes fadeInUp { from { opacity: 0; transform: translateY(20px); } to { opacity: 1; transform: translateY(0); } }
+@keyframes pulse { 0%, 100% { opacity: 1; } 50% { opacity: 0.5; } }
+@keyframes bounce { 0%, 100% { transform: translateY(0); } 50% { transform: translateY(-10px); } }
